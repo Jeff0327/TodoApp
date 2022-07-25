@@ -156,10 +156,7 @@ export default function App() {
           
           
           {toDos[key].complete===complete ? <Text style={styles.toDoText}>{toDos[key].text}</Text> :
-          <Text style={styles.textline}>{toDos[key].text}</Text>}
-          <TouchableOpacity onPress={()=>addComplete()}>
-          <Fontisto name="checkbox-active" size={24} color="black" />
-          </TouchableOpacity>
+          <Text style={styles.toDoText}>{toDos[key].text}</Text>}
           <TouchableOpacity style={{flexDirection:"row"}} onPress={()=> deleteToDo(key)}>
           <Fontisto name="trash" size={18} color={theme.grey} />
           </TouchableOpacity>
